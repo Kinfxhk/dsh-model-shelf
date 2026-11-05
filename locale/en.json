@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Model shelf",
+    "description": "Filters routable models by API, bookmarks them, and shows those bookmarks first in the chat model menu."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@local/model-shelf",
+  "version": "1.2.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Browse routable models by API, bookmark them, and apply one without typing its name.",
+  "type": "module",
+  "engines": {
+    "dsh": ">=0.2.1-rc.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kinfxhk/dsh-model-shelf.git"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
